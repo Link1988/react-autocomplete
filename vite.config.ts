@@ -12,6 +12,8 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@constants': path.resolve(__dirname, './src/constants'),
       '@helpers': path.resolve(__dirname, './src/helpers'),
+      '@api': path.resolve(__dirname, './src/api'),
+      '@mappers': path.resolve(__dirname, './src/mappers'),
     },
   },
   server: {
