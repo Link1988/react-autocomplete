@@ -28,12 +28,10 @@ export const Autocomplete = ({
 }: AutocompleteProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
-  const [highlightedIndex, setHighlightedIndex] = useState<number | null>(null);
 
   const openDropdown = () => setShowDropdown(true);
   const closeDropdown = () => {
     setShowDropdown(false);
-    setHighlightedIndex(null);
   };
 
   const handleOptionClick = (option: Pokemon) => {
@@ -62,9 +60,6 @@ export const Autocomplete = ({
           aria-autocomplete="list"
           aria-controls="autocomplete-list"
           aria-disabled={loading}
-          aria-activedescendant={
-            highlightedIndex !== null ? `autocomplete-option-${highlightedIndex}` : undefined
-          }
           className="autocomplete__input"
           id="autocomplete-input"
           name="autocomplete"
@@ -97,11 +92,8 @@ export const Autocomplete = ({
               <li
                 key={option.name}
                 id={`autocomplete-option-${index}`}
-                className={`autocomplete__option ${
-                  highlightedIndex === index ? 'highlighted' : ''
-                  }`}
+                className='autocomplete__option'
                 role="option"
-                aria-selected={highlightedIndex === index}
               >
                 <button
                   type="button"
