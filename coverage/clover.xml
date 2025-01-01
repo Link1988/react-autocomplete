@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1735700807208" clover="3.2.0">
-  <project timestamp="1735700807208" name="All files">
-    <metrics statements="67" coveredstatements="62" conditionals="31" coveredconditionals="22" methods="28" coveredmethods="22" elements="126" coveredelements="106" complexity="0" loc="67" ncloc="67" packages="5" files="7" classes="7"/>
+<coverage generated="1735755076461" clover="3.2.0">
+  <project timestamp="1735755076461" name="All files">
+    <metrics statements="66" coveredstatements="62" conditionals="31" coveredconditionals="22" methods="28" coveredmethods="23" elements="125" coveredelements="107" complexity="0" loc="66" ncloc="66" packages="5" files="7" classes="7"/>
     <package name="src">
       <metrics statements="16" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3"/>
       <file name="App.tsx" path="/Users/ahernandez/Sites/react-autocomplete/src/App.tsx">
@@ -25,22 +25,21 @@
       </file>
     </package>
     <package name="src.components.Autocomplete">
-      <metrics statements="13" coveredstatements="12" conditionals="16" coveredconditionals="12" methods="9" coveredmethods="5"/>
+      <metrics statements="12" coveredstatements="12" conditionals="16" coveredconditionals="12" methods="9" coveredmethods="6"/>
       <file name="Autocomplete.tsx" path="/Users/ahernandez/Sites/react-autocomplete/src/components/Autocomplete/Autocomplete.tsx">
-        <metrics statements="13" coveredstatements="12" conditionals="16" coveredconditionals="12" methods="9" coveredmethods="5"/>
+        <metrics statements="12" coveredstatements="12" conditionals="16" coveredconditionals="12" methods="9" coveredmethods="6"/>
         <line num="18" count="2" type="stmt"/>
         <line num="29" count="12" type="stmt"/>
         <line num="30" count="12" type="stmt"/>
         <line num="32" count="12" type="stmt"/>
         <line num="33" count="12" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="37" count="12" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
+        <line num="35" count="12" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="12" type="stmt"/>
         <line num="42" count="12" type="stmt"/>
-        <line num="44" count="12" type="stmt"/>
-        <line num="92" count="6" type="stmt"/>
-        <line num="102" count="1" type="stmt"/>
+        <line num="90" count="6" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.helpers">

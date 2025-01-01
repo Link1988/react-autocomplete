@@ -30,13 +30,11 @@ export const Autocomplete = ({
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
   const openDropdown = () => setShowDropdown(true);
-  const closeDropdown = () => {
-    setShowDropdown(false);
-  };
+  const closeDropdown = () => setShowDropdown(false);
 
   const handleOptionClick = (option: Pokemon) => {
     onSelect(option);
-    setShowDropdown(false);
+    closeDropdown();
   };
 
   useClickOutside(containerRef, closeDropdown);
@@ -51,7 +49,7 @@ export const Autocomplete = ({
       aria-haspopup="listbox"
     >
       {label && (
-          <label className="autocomplete__label" htmlFor="autocomplete-input">
+          <label className="autocomplete__label" htmlFor="autocomplete-search">
               {label}
           </label>
       )}
@@ -60,13 +58,13 @@ export const Autocomplete = ({
           aria-autocomplete="list"
           aria-controls="autocomplete-list"
           aria-disabled={loading}
-          className="autocomplete__input"
-          id="autocomplete-input"
+          className="autocomplete__search"
+          id="autocomplete-search"
           name="autocomplete"
+          type="text"
           onChange={onChange}
           onFocus={openDropdown}
           placeholder={placeholder}
-          type="text"
           value={searchValue}
           {...inputProps}
         />
@@ -98,9 +96,9 @@ export const Autocomplete = ({
                 <button
                   type="button"
                   className="autocomplete__button"
-                  onClick={() => {
-                    handleOptionClick(option);
-                  }}
+                  onClick={() =>
+                    handleOptionClick(option)
+                  }
                   dangerouslySetInnerHTML={{
                     __html: highlightString(option.name, searchValue ?? ''),
                   }}

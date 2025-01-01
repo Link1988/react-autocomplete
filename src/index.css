@@ -63,7 +63,7 @@ h1 {
   position: relative;
 }
 
-.autocomplete__input {
+.autocomplete__search {
   background-color: #2e2e2e;
   border: solid 1px #424242;
   border-radius: 4px;

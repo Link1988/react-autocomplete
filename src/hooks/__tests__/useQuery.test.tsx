@@ -45,9 +45,11 @@ describe('useQuery', () => {
     });
 
 
-    await waitFor(() => expect(result.current.data).toEqual({ data: 'response' }));
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.error).toBeNull();
+    await waitFor(() => {
+      expect(result.current.data).toEqual({ data: 'response' });
+      expect(result.current.isLoading).toBe(false);
+      expect(result.current.error).toBeNull();
+    });
   });
 
   it('should set error state when the fetch fails', async () => {
@@ -58,9 +60,11 @@ describe('useQuery', () => {
       result.current.fetch();
     });
 
-    await waitFor(() => expect(result.current.data).toBeNull());
-    expect(result.current.isLoading).toBe(false);
-    expect(result.current.error).toEqual(new Error('Fetch failed'));
+    await waitFor(() => {
+      expect(result.current.data).toBeNull();
+      expect(result.current.isLoading).toBe(false);
+      expect(result.current.error).toEqual(new Error('Fetch failed'));
+    });
   });
 
   it('should call abort and stop loading when abort is triggered', async () => {
@@ -103,7 +107,9 @@ describe('useQuery', () => {
       result.current.abort();
     });
 
-    await waitFor(() => expect(result.current.error).toEqual(new Error('Aborted')));
-    expect(result.current.isLoading).toBe(false);
+    await waitFor(() => {
+      expect(result.current.error).toEqual(new Error('Aborted'));
+      expect(result.current.isLoading).toBe(false);
+    });
   });
 });

@@ -62,7 +62,7 @@ describe('Autocomplete', () => {
     });
   });
 
-  it('should display "No results found" if no options match', () => {
+  it('should display "No results found" if search is empty', () => {
     renderComponent({ options: [], searchValue: 'Unknown' });
 
     const input = screen.getByRole('textbox');
